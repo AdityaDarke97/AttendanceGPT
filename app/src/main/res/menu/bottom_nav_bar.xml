@@ -3,9 +3,11 @@
 
     <item
         android:id="@+id/home"
+        android:icon="@drawable/home"
         android:title="@string/home" />
 
     <item
+        android:icon="@drawable/analytics"
         android:id="@+id/analytics"
         android:title="@string/analytics" />
 
@@ -15,10 +17,12 @@
         android:title="" />
     <item
         android:id="@+id/updates"
+        android:icon="@drawable/updates_bell"
         android:title="@string/updates" />
 
     <item
         android:id="@+id/profile"
+        android:icon="@drawable/profile"
         android:title="@string/profile" />
 
 </menu>
