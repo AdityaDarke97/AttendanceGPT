@@ -1,15 +1,17 @@
-package com.mdwc.attendancetracker
+package com.mdwc.attendancetracker.activities
 
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.enableEdgeToEdge
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.commit
+import com.mdwc.attendancetracker.R
 import com.mdwc.attendancetracker.databinding.ActivityLandingBinding
+import com.mdwc.attendancetracker.fragments.AnalyticsFragment
+import com.mdwc.attendancetracker.fragments.HomeFragment
+import com.mdwc.attendancetracker.fragments.ProfileFragment
+import com.mdwc.attendancetracker.fragments.UpdatesFragment
 
 class LandingActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLandingBinding
