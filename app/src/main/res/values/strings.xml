@@ -50,4 +50,5 @@
     <string name="updates">Updates</string>
     <string name="profile">Profile</string>
     <string name="welcome_string">Hey, $UserName</string>
+    <string name="subjects">Subjects:</string>
 </resources>

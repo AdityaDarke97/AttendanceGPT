@@ -10,8 +10,10 @@
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/top_bar_bg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -24,19 +26,63 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/hey_welcome_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/poppins_medium"
                 android:text="@string/welcome_string"
-                android:textColor="#fff"
+                android:textColor="@color/textColor"
                 android:textSize="32sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:contentDescription="@string/todo"
+                android:padding="16dp"
+                android:src="@drawable/notifications"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/subs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/subjects"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_bar" />
+
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="40dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            android:textSize="11sp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:background="@drawable/top_bar_bg"-->
+<!--            app:backgroundTint="#fff"-->
+<!--            android:text="Present All"-->
+<!--            android:layout_marginEnd="42dp"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/top_bar"/>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/subjects_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/subs" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

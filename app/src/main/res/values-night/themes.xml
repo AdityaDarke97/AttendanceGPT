@@ -7,6 +7,6 @@
 
 
     <style name="BottomNavigationViewTextStyle">
-        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
     </style>
 </resources>
