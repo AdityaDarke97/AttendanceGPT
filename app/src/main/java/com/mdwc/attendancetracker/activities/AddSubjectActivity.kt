@@ -1,21 +1,37 @@
 package com.mdwc.attendancetracker.activities
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.mdwc.attendancetracker.R
+import com.mdwc.attendancetracker.databinding.ActivityAddSubjectBinding
+import com.mdwc.attendancetracker.models.Subject
+import io.paperdb.Paper
 
 class AddSubjectActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityAddSubjectBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_add_subject)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        binding = ActivityAddSubjectBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.submitButton.setOnClickListener {
+            val subjectName = binding.subnameEditText.text.toString().trim()
+
+            if (subjectName.isNotEmpty()) {
+                val newSubject = Subject(name = subjectName)
+
+                val existingSubjects = Paper.book().read<MutableList<Subject>>("MySubjects", mutableListOf())
+
+                existingSubjects?.add(newSubject)
+                Paper.book().write<MutableList<Subject>>("MySubjects", existingSubjects as MutableList<Subject>)
+
+                Toast.makeText(this, "Subject Added!", Toast.LENGTH_SHORT).show()
+                finish()
+            } else {
+                binding.subnameEditText.error = "Please enter a subject name"
+            }
         }
     }
 }

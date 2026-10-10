@@ -37,7 +37,8 @@ android {
 }
 
 dependencies {
-   implementation(platform(libs.androidx.compose.bom))
+
+    implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.appcompat)
@@ -62,7 +63,5 @@ dependencies {
 
     //external
     implementation("io.github.pilgr:paperdb:2.7.2")
-    implementation("io.objectbox:objectbox-kotlin:6.0.0-beta2")
-    implementation("io.objectbox:objectbox-windows:6.0.0-beta2")
 
 }

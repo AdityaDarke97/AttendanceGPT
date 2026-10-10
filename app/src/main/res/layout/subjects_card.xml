@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="50dp"
-    android:layout_marginHorizontal="30dp"
-    android:layout_marginVertical="16dp"
-    android:background="@drawable/top_bar_bg">
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    android:background="@drawable/subjects_card_bg">
 
     <TextView
         android:id="@+id/idx"
@@ -14,7 +14,7 @@
         android:layout_marginStart="8dp"
         android:fontFamily="@font/poppins_light"
         android:text="2"
-        android:textColor="@color/textColor"
+        android:textColor="#fff"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
         android:layout_marginStart="8dp"
         android:fontFamily="@font/poppins_light"
         android:text="Discrete Structure"
-        android:textColor="@color/textColor"
+        android:textColor="#fff"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/idx"
@@ -41,7 +41,7 @@
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/poppins_light"
         android:text="74%"
-        android:textColor="@color/textColor"
+        android:textColor="#fff"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

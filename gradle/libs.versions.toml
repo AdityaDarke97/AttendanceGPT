@@ -15,7 +15,6 @@ activityKtx = "1.13.0"
 navigationFragmentKtx = "2.6.0"
 navigationUiKtx = "2.6.0"
 appcompatVersion = "1.8.0"
-objectbox = "6.0.0-beta2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -44,7 +43,4 @@ appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "a
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
-objectbox = { id = "io.objectbox", version.ref = "objectbox" }
 
